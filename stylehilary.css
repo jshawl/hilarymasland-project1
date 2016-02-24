@@ -1,5 +1,7 @@
+
 body {
   background-color: navy;
+  text-align: center;
 }
 
 img {
@@ -7,4 +9,17 @@ img {
 }
 a {
   color: white;
+  font-family: Helvetica;
+  font-size: 18px;
+}
+button {
+  font-size: 20px;
+  background-color: #99CCFF;
+  color: #6633CC;
+  font-family: Helvetica;
+  font-style: oblique;;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
