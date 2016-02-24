@@ -1,4 +1,5 @@
 
+
 var questions=[
 
   {
@@ -25,35 +26,37 @@ var questions=[
     correctResponse:"Correct- If only I could sing....",
     wrongResponse:"Wrong"
   },
-  {
-    promptText:"True or False: I LOVE Broadway / Musicals.",
-    answer:'True',
-    correctResponse:"Correct- If only I could sing....",
-    wrongResponse:"Wrong"
-  }
 ];
 
 questions.forEach(function(question,index){
-  var button = document.createElement("button")
-  button.innerHTML="Question " + index
-  button.addEventListener("click", function(){
-    
-  })
+  var button = document.createElement("button");
   document.querySelector("div.buttons").appendChild(button);
-  console.log(index);
-})
-
-
-
-var gameScore = 0;
-
-  function question(index) {
+  button.innerHTML="Question " + index;
+  button.addEventListener("click", function(){
     var nickname = prompt(questions[index].promptText);
       if (nickname === questions[index].answer) {
         alert(questions[index].correctResponse);
         gameScore++;
+        alert("Your score: " + gameScore);
       }
       else {
         alert(questions[index].wrongResponse);
       }
-  }
+  });
+  console.log(index);
+});
+
+gameScore = 0;
+
+
+
+  // function question(index) {
+  //   var nickname = prompt(questions[index].promptText);
+  //     if (nickname === questions[index].answer) {
+  //       alert(questions[index].correctResponse);
+  //       gameScore++;
+  //     }
+  //     else {
+  //       alert(questions[index].wrongResponse);
+  //     }
+  // }
