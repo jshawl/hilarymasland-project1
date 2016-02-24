@@ -13,4 +13,16 @@ a {
   font-size: 16px;
   color: yellow;
   font-family: Helvetica;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+img {
+  box-sizing:border-box;
+  max-width: 500px;
+
 }
