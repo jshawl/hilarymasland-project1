@@ -1,0 +1,32 @@
+body {
+  background-color: magenta;
+}
+
+img {
+  align: center;
+}
+
+.box2 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  background-color: black;
+}
+.box3 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  background-color: black;
+  float: center;
+}
+
+.box4 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+  background-color: black;
+  align: right;
+}

@@ -1,0 +1,56 @@
+Choose a Category:
+  *IF WDI Trivia:
+    Ask question one: "What does var stand for"
+      If answer === 'variable", alert "good job and +1 point"
+      If answer === wrong, alert "That's not quite the answer we were looking for but good try!"
+    Ask question two: "What type of Javascript uses true and false"
+      If answer === 'boolean', alert "good job +1 point"
+      If answer === wrong, alert "That's not quite the answer we were looking for but good try!"
+    Ask question three: What is the index value of 'yellow'?['yellow', 'blue', 'green']
+      If answer === 0, alert "good job" "+1 point
+      Else=== wrong, alert "That's not quite the answer we were looking for but good try!"
+
+    *Total Points*
+      3/3 - gif
+      2/3 - gif close but no cigar
+      1/3 - gif parkor gif http://giphy.com/gifs/kinja-t2eBr71ACeDC0
+      0/3 - gif  bugs bunny http://giphy.com/gifs/cartoon-bunny-like-a-boss-YwxsiPgxjk3Fm
+
+
+
+  *IF HARRY POTTER TRIVIA:
+  Ask question one: Who is Tom Riddle?
+    If answer === "Voldemort" || "He who should not be named" correct,alert "good job and +1 point"
+    Else === wrong, alert "That's not quite the answer we were looking for but good try!"
+  Ask question two: What is the shape of Harry's scar?
+    If answer === "lightning bolt", alert good job and +1 point
+    Else === wrong, "That's not quite the answer we were looking for but good try!"
+  Ask question three: What word describes a person who is not a witch or wizard?
+    If answer === "Muggle", alert good job and +1 point
+    Else === wrong, "That's not quite the answer we were looking for but good try!"
+
+  *Total Points*
+    3/3 - gif
+    2/3 - gif close but no cigar
+    1/3 - gif
+    0/3 - gif  bugs bunny
+
+
+
+
+
+  *IF HILARY TRIVIA:
+  Ask question one: Which of the following is NOT one of my nicknames: "Hil", "Hiz", "Tiger", "Grizzly", "Peanut".
+    If answer === correct, alert good job and +1 point
+    ELSE === wrong, "That's not quite the answer we were looking for but good try!"
+  Ask question two: What state am I from? ("PA", "OH", "DE"?
+    If answer === correct, alert good job and +1 point
+    ELSE === wrong, "That's not quite the answer we were looking for but good try!"
+  Ask question three: What is my favorite movie? ("Titanic", "Twister")
+    If answer === Titanic || Twister alert" Trick question. Both of these movies are flawless!
+
+  **Total Points**
+    3/3 - gif
+    2/3 - gif close but no cigar
+    1/3 - gif parkor gif http://giphy.com/gifs/kinja-t2eBr71ACeDC0
+    0/3 - gif  bugs bunny http://giphy.com/gifs/cartoon-bunny-like-a-boss-YwxsiPgxjk3Fm
