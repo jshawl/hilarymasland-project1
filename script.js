@@ -31,32 +31,33 @@ var questions=[
 questions.forEach(function(question,index){
   var button = document.createElement("button");
   document.querySelector("div.buttons").appendChild(button);
-  button.innerHTML="Question " + index;
+  button.innerHTML="Question " + (1 + index);
   button.addEventListener("click", function(){
-    var nickname = prompt(questions[index].promptText);
-      if (nickname === questions[index].answer) {
-        alert(questions[index].correctResponse);
-        gameScore++;
-        alert("Your score: " + gameScore);
-      }
-      else {
-        alert(questions[index].wrongResponse);
-      }
+    showQuestion(index);
+    button.disabled=true;
   });
   console.log(index);
 });
 
 gameScore = 0;
 
+totalScore();
 
+function showQuestion(index){
+  var nickname = prompt(questions[index].promptText);
+    if (nickname === questions[index].answer) {
+      alert(questions[index].correctResponse);
+      gameScore++;
+      totalScore();
+      alert("Please move to the next Question. Your score is: " + gameScore);
+    }
+    else {
+      alert(questions[index].wrongResponse);
+      alert("Please move to the next Question. Your score is: " + gameScore);
+    }
+  }
 
-  // function question(index) {
-  //   var nickname = prompt(questions[index].promptText);
-  //     if (nickname === questions[index].answer) {
-  //       alert(questions[index].correctResponse);
-  //       gameScore++;
-  //     }
-  //     else {
-  //       alert(questions[index].wrongResponse);
-  //     }
-  // }
+  function totalScore(){
+    var span = document.querySelector(".score");
+    span.innerHTML=gameScore + "/" + questions.length;
+  }
