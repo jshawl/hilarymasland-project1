@@ -36,7 +36,7 @@ questions.forEach(function(question,index){
     showQuestion(index);
     button.disabled=true;
   });
-  button.addEventListener("click", buttonClick)
+  button.addEventListener("click", buttonClick);
   console.log(index);
 });
 
@@ -45,11 +45,9 @@ gameScore = 0;
 totalScore();
 
 function buttonClick() {
-  console.log("button click")
+  console.log("button click");
 
 }
-
-
 function showQuestion(index){
   var nickname = prompt(questions[index].promptText);
     if (nickname === questions[index].answer) {
