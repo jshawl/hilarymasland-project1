@@ -49,6 +49,7 @@ function showQuestion(index){
       alert(questions[index].correctResponse);
       gameScore++;
       totalScore();
+      changeGif();
       alert("Please move to the next Question. Your score is: " + gameScore);
     }
     else {
@@ -61,3 +62,12 @@ function showQuestion(index){
     var span = document.querySelector(".score");
     span.innerHTML=gameScore + "/" + questions.length;
   }
+  function changeGif(){
+    if (gameScore === questions.lengh) {
+    document.querySelector(".BugsBunny"); src = "http://i.giphy.com/hMlH2yJVPr5qE.gif";
+  }
+}
+  /*function changeGif(){
+   If totalScore === 4/4 {
+  replace gif with http://i.giphy.com/hMlH2yJVPr5qE.gif
+  */
