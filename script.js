@@ -15,7 +15,7 @@ var questions=[
     wrongResponse:"Wrong- PA PRIDE, Y'ALL"
   },
   {
-    promptText:"True or False: My favorite move is Titanic.",
+    promptText:"True or False: My favorite movie is Titanic.",
     answer:'True',
     correctResponse:"Correct- I'll never let go",
     wrongResponse:"Wrong"
