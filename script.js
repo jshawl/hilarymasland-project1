@@ -36,12 +36,19 @@ questions.forEach(function(question,index){
     showQuestion(index);
     button.disabled=true;
   });
+  button.addEventListener("click", buttonClick)
   console.log(index);
 });
 
 gameScore = 0;
 
 totalScore();
+
+function buttonClick() {
+  console.log("button click")
+
+}
+
 
 function showQuestion(index){
   var nickname = prompt(questions[index].promptText);
@@ -63,8 +70,9 @@ function showQuestion(index){
     span.innerHTML=gameScore + "/" + questions.length;
   }
   function changeGif(){
-    if (gameScore === questions.lengh) {
-    document.querySelector(".BugsBunny"); src = "http://i.giphy.com/hMlH2yJVPr5qE.gif";
+    if (gameScore === questions.length
+    ) {
+    document.querySelector(".bugs-bunny").src = "http://i.giphy.com/hMlH2yJVPr5qE.gif";
   }
 }
   /*function changeGif(){
