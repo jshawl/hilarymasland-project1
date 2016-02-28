@@ -27,6 +27,8 @@ var questions=[
     wrongResponse:"Wrong"
   },
 ];
+// excellent!! this will make it super easy to add questions / change answers
+// easily in the future.
 
 questions.forEach(function(question,index){
   var button = document.createElement("button");
@@ -36,7 +38,6 @@ questions.forEach(function(question,index){
     showQuestion(index);
     button.disabled=true;
   });
-  button.addEventListener("click", buttonClick);
   console.log(index);
 });
 
@@ -44,36 +45,42 @@ gameScore = 0;
 
 totalScore();
 
-function buttonClick() {
-  console.log("button click");
-
-}
 function showQuestion(index){
   var nickname = prompt(questions[index].promptText);
-    if (nickname === questions[index].answer) {
-      alert(questions[index].correctResponse);
-      gameScore++;
-      totalScore();
-      changeGif();
-      alert("Please move to the next Question. Your score is: " + gameScore);
-    }
-    else {
-      alert(questions[index].wrongResponse);
-      alert("Please move to the next Question. Your score is: " + gameScore);
-    }
+  if (nickname === questions[index].answer) {
+    alert(questions[index].correctResponse);
+    gameScore++;
+    totalScore();
+    changeGif();
+    alert("Please move to the next Question. Your score is: " + gameScore);
   }
-
-  function totalScore(){
-    var span = document.querySelector(".score");
-    span.innerHTML=gameScore + "/" + questions.length;
-  }
-  function changeGif(){
-    if (gameScore === questions.length
-    ) {
-    document.querySelector(".bugs-bunny").src = "http://i.giphy.com/hMlH2yJVPr5qE.gif";
+  else {
+    alert(questions[index].wrongResponse);
+    alert("Please move to the next Question. Your score is: " + gameScore);
   }
 }
-  /*function changeGif(){
-   If totalScore === 4/4 {
-  replace gif with http://i.giphy.com/hMlH2yJVPr5qE.gif
-  */
+
+function totalScore(){
+  var span = document.querySelector(".score");
+  span.innerHTML=gameScore + "/" + questions.length;
+}
+function changeGif(){
+  if (gameScore === questions.length) {
+    document.querySelector(".bugs-bunny").src = "http://i.giphy.com/hMlH2yJVPr5qE.gif";
+    // download above url to prevent 404 in the future
+    // This is the write way to handle gif change!
+    // you could also add an argument to this function.
+    //
+    // e.g. changeGif("url to gif")
+    // so you can reuse this function over and over with different images
+  }
+}
+
+// excellent project 1!!!
+// Another approach you could take would be to use input text fields instead of prompts
+// to get user input. This will give you more control over the look (CSS) of your project.
+//
+// Also, you could have gifs related to the question being answered.
+//
+// Let me know if there are things you have in mind and we can work through them in
+// our next 1-1 this week.
